@@ -3,7 +3,7 @@ int main()
 {
     int n,a,b,c;
     scanf("%d",&n);
-    if(n==0||n==1)
+    if(n==1||n==0)
     {
         printf("True");
     }
@@ -12,19 +12,19 @@ int main()
         a=0;
         b=1;
         c=a+b;
-    }
-    while(n>c)
-    {
-        a=b;
-        b=c;
-        c=a+b;
-    }
-    if(c==n)
-    {
-        printf("True");
-    }
-    else
-    {
-        printf("False");
+        while(n>c)
+        {
+            a=b;
+            b=c;
+            c=a+b;
+        }
+        if(c==n)
+        {
+            printf("True");
+        }
+        else
+        {
+            printf("False");
+        }
     }
 }
