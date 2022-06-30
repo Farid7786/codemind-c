@@ -8,8 +8,11 @@ int main()
     for(i=0;i<n;i++)
     {
         scanf("%d",&arr[i]);
+    }
+    for(i=0;i<n;i++)
+    {
         sum=sum+arr[i];
     }
-    avg=float(sum)/float(n);
+    avg=float (sum)/ float(n);
     printf("%.2f",avg);
 }
