@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,sum=0,add=0,sub=0;
+    int n,avg,i,sum=0,add=0,abo=0,diff=0;
     scanf("%d",&n);
     int arr[n];
     for(i=0;i<n;i++)
@@ -10,12 +10,20 @@ int main()
     }
     for(i=0;i<n/2;i++)
     {
-        sum=sum+arr[i];
+            add=add+arr[i];
     }
     for(i=n/2;i<n;i++)
     {
-        add=add+arr[i];
+        abo=abo+arr[i];
     }
-    sub=add-sum;
-    printf("%d",sub);
+    if(add>abo)
+    {
+        diff=add-abo;
+        printf("%d",diff);
+    }
+    else
+    {
+        diff=abo-add;
+        printf("%d",diff);
+    }
 }
