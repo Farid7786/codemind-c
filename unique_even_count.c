@@ -1,9 +1,9 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,j,c=0,sum=0;
+    int n,i,j,c,sum=0;
     scanf("%d",&n);
-    int arr[i];
+    int arr[n];
     for(i=0;i<n;i++)
     {
         scanf("%d",&arr[i]);
@@ -11,14 +11,14 @@ int main()
     for(i=0;i<n;i++)
     {
         c=0;
-        for(j=i;j<n;j++)
+        for(j=i+1;j<n;j++)
         {
             if(arr[i]==arr[j])
             {
                 c++;
             }
         }
-        if(c==1&&arr[i]%2==0)
+        if(c==0&&arr[i]%2==0)
         {
             sum++;
         }
