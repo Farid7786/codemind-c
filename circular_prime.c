@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,r,sum=0,c=0,m=0,j;
+    int n,i,r,c=0,sum=0,rev=0;
     scanf("%d",&n);
     for(i=1;i<=n;i++)
     {
@@ -10,28 +10,31 @@ int main()
             c++;
         }
     }
-    while(n>0)
+    if(c==2)
     {
-        r=n%10;
-        sum=sum*10+r;
-        n=n/10;
-    }
-    for(j=1;j<=sum;j++)
-    {
-        if(sum%j==0)
+        while(n>0)
         {
-            m++;
+            r=n%10;
+            sum=sum*10+r;
+            n=n/10;
         }
     }
-    if(c==2&&m==2)
+    for(i=1;i<=sum;i++)
+    {
+        if(sum%i==0)
+        {
+            rev++;
+        }
+    }
+    if(c==rev)
     {
         printf("circular prime");
     }
-    else if(c==2&&m!=2)
+    else if(c==2&&rev!=2)
     {
         printf("prime but not a circular prime");
     }
-    else if(c!=2&&m!=2)
+    else if(c!=2&&rev!=2)
     {
         printf("not prime");
     }
