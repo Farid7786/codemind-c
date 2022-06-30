@@ -3,14 +3,14 @@ int main()
 {
     int n,i,c=0;
     scanf("%d",&n);
-    for(i=0;i<=n;i++)
+    for(i=1;i<n;i++)
     {
-        if(i*i+1==n)
+        if(i*(i+1)==n)
         {
             c++;
         }
     }
-    if(c==0)
+    if(c==1)
     {
         printf("YES");
     }
