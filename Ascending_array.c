@@ -1,21 +1,23 @@
 #include<stdio.h>
 int main()
 {
-    long int n,i,c=0;
-    scanf("%ld",&n);
+    int n,i,c=0,m=0;
+    scanf("%d",&n);
     int arr[n];
     for(i=0;i<n;i++)
     {
-        scanf("%ld",&arr[i]);
+        scanf("%d",&arr[i]);
     }
+    c=0;
     for(i=0;i<n;i++)
     {
-        if(arr[i]<=arr[i+1])
+        if(c<arr[i])
         {
-            c++;
+            c=arr[i];
+            m++;
         }
     }
-    if(c==n)
+    if(m==n)
     {
         printf("yes");
     }
