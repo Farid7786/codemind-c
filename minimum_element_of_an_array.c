@@ -1,7 +1,8 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,j,sum=0;
+    int n,i,min=10000;
+    float avg;
     scanf("%d",&n);
     int arr[n];
     for(i=0;i<n;i++)
@@ -10,11 +11,10 @@ int main()
     }
     for(i=0;i<n;i++)
     {
-    sum=arr[0];
-    if(arr[i]<=sum)
-    {
-        sum=arr[i];
+        if(arr[i]<min)
+        {
+            min=arr[i];
+        }
     }
-    }
-    printf("%d",sum);
+    printf("%d",min);
 }
