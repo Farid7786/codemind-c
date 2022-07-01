@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,a,b,sum=0,c=0;
+    int n,i,a,b,c=0,max=0;
     scanf("%d",&n);
     int arr[n];
     for(i=0;i<n;i++)
@@ -13,9 +13,9 @@ int main()
     {
         if(arr[i]>=a&&arr[i]<=b)
         {
-            if(arr[i]>=sum)
+            if(max<=arr[i])
             {
-                sum=arr[i];
+                max=arr[i];
                 c++;
             }
         }
@@ -26,6 +26,6 @@ int main()
     }
     else
     {
-        printf("%d",sum);
+        printf("%d",max);
     }
 }
