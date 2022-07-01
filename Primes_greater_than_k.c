@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,k,c,m=0,j;
+    int n,i,c=0,k,j,m=0;
     scanf("%d",&n);
     int arr[n];
     for(i=0;i<n;i++)
@@ -19,12 +19,9 @@ int main()
                 c++;
             }
         }
-        if(c==2)
+        if(c==2&&arr[i]>=k)
         {
-            if(arr[i]>=k)
-            {
-                m++;
-            }
+            m++;
         }
     }
     printf("%d",m);
