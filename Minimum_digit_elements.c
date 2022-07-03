@@ -1,21 +1,34 @@
-#include <stdio.h>
+#include<stdio.h>
 #include<math.h>
 int main()
-{int n,k,c=0,i,m;
-scanf("%d",&n);
-int a[n];
-for(i=0;i<n;i++)
-scanf("%d",&a[i]);
-for(i=0;i<n;i++){
-    k=(int)log10(a[i])+1;
-    a[i]=k;
-}m=a[0];
-for(i=0;i<n;i++){
-  if(a[i]<m)
-  m=a[i];
-}for(i=0;i<n;i++){
-    if(a[i]==m)
-    c++;
-}printf("%d",c);
+{
+    int n,i,k,max=0,c=0;
+    scanf("%d",&n);
+    int arr[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+       k=(int)log10(arr[i])+1;
+       arr[i]=k;
+    }
+    max=arr[0];
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]<max)
+        {
+            max=arr[i];
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]==max)
+        {
+            c++;
+        }
+    }
+    printf("%d",c);
     return 0;
 }
