@@ -1,0 +1,57 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int t,i,j,c,min=0,max=0,m,k,cnt=0,ab,bs;
+    scanf("%d",&t);
+    while(t>0)
+    {
+        int n;
+        scanf("%d",&n);
+        for(i=n;i>1;i--)
+        {
+            c=0;
+            for(j=1;j<=i;j++)
+            {
+                if(i%j==0)
+                {
+                    c++;
+                }
+            }
+            if(c==2)
+            {
+                min=i;
+                break;
+            }
+        }
+        for(k=n+1;k>n;k++)
+        {
+            c=0;
+            for(m=1;m<=k;m++)
+            {
+                if(k%m==0)
+                {
+                    c++;
+                }
+            }
+            if(c==2)
+            {
+                max=k;
+                break;
+            }
+        }
+        ab=abs(n-min);
+        bs=abs(n-max);
+        if(ab>bs)
+        {
+            printf("%d
+",max);
+        }
+        else
+        {
+            printf("%d
+",min);
+        }
+        t--;
+    }
+}
