@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int n,r,sum=0,k,c=0,rem,m=0,re,add=0,h,rema,plus=0,cnt=0,ab;
+    scanf("%d%d",&n,&k);
+    h=n;
+    while(n>0)
+    {
+        r=n%10;
+        c+=1;
+        sum=sum*10+r;
+        n=n/10;
+        if(c==k)
+        {
+            break;
+        }
+    }
+    while(sum>0)
+    {
+        rem=sum%10;
+        m=m*10+rem;
+        sum=sum/10;
+    }
+    while(h>0)
+    {
+        re=h%10;
+        add=add*10+re;
+        h=h/10;
+    }
+    while(add>0)
+    {
+        rema=add%10;
+        cnt+=1;
+        plus=plus*10+rema;
+        add=add/10;
+        if(cnt==k)
+        {
+            break;
+        }
+    }
+    ab=abs(m-plus);
+    printf("%d",ab);
+}
