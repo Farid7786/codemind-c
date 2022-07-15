@@ -1,0 +1,49 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int n,i,j,c,m,k,cpy,t,cnt,ab,bs;
+    scanf("%d",&n);
+    for(i=n;i>1;i--)
+    {
+        c=0;
+        for(j=1;j<=i;j++)
+        {
+            if(i%j==0)
+            {
+                c++;
+            }
+        }
+        if(c==2)
+        {
+            m=i;
+            break;
+        }
+    }
+    for(k=n+1;k>n;k++)
+    {
+        cnt=0;
+        for(t=1;t<=k;t++)
+        {
+            if(k%t==0)
+            {
+                cnt++;
+            }
+        }
+        if(cnt==2)
+        {
+            cpy=k;
+            break;
+        }
+    }
+    ab=abs(m-n);
+    bs=abs(cpy-n);
+    if(ab>bs)
+    {
+        printf("%d",bs);
+    }
+    else
+    {
+        printf("%d",ab);
+    }
+}
