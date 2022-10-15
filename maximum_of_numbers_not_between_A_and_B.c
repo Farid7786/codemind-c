@@ -1,21 +1,24 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,a,b,c=0,max=0;
+    int n,a[100],sum=0,i,k,l,c=0,m=0;
     scanf("%d",&n);
-    int arr[n];
     for(i=0;i<n;i++)
     {
-        scanf("%d",&arr[i]);
+        scanf("%d",&a[i]);
     }
-    scanf("%d%d",&a,&b);
+    scanf("%d %d",&k,&l);
     for(i=0;i<n;i++)
     {
-        if(arr[i]<a||arr[i]>b)
+        if(a[i]>=k&&a[i]<=l)
         {
-            if(max<arr[i])
+            m++;
+        }
+        else
+        {
+            if(a[i]>=sum)
             {
-                max=arr[i];
+                sum=a[i];
                 c++;
             }
         }
@@ -26,6 +29,7 @@ int main()
     }
     else
     {
-        printf("%d",max);
+        printf("%d",sum);
     }
+    return 0;
 }
