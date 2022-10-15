@@ -1,25 +1,28 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,a,b,c=0;
+    int n,a[100],i,s=0,c,b,m=0;
     scanf("%d",&n);
-    int arr[n];
     for(i=0;i<n;i++)
     {
-        scanf("%d",&arr[i]);
+        scanf("%d",&a[i]);
     }
-    scanf("%d%d",&a,&b);
+    scanf("%d %d",&c,&b);
     for(i=0;i<n;i++)
     {
-        if(arr[i]<a||arr[i]>b)
+        if(a[i]>=c && a[i]<=b)
         {
-            printf("%d ",arr[i]);
-            c++;
+            s++;
+        }
+        else
+        {
+            printf("%d ",a[i]);
+            m++;
         }
     }
-
-    if(c==0)
+    if(m==0)
     {
         printf("-1");
     }
+    return 0;
 }
