@@ -1,12 +1,12 @@
 #include<stdio.h>
-int main()
+int pali()
 {
-    int n,i,c,h,sum,r,j;
+    int n,i,j,c,sum,r,h;
     scanf("%d",&n);
     for(i=n+1;i>n;i++)
     {
-        h=i;
         sum=0;
+        h=i;
         while(h>0)
         {
             r=h%10;
@@ -30,4 +30,8 @@ int main()
             }
         }
     }
+}
+int main()
+{
+    pali();
 }
